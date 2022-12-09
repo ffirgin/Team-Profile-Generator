@@ -91,7 +91,7 @@ function startApp(){
       },
       {
         type: 'input',
-        name: 'engGithub',
+        name: 'engGitHub',
         message: "What is the engineer's GitHub username?"
       },
     ])
