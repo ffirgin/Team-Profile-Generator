@@ -1,12 +1,12 @@
 const createTeam = team => {
   const createManager = (manager) => {
     return `
-    <div>
-    <div>
-      <h2>${manager.name}</h2>
-      <h3>${manager.getRole()}</h3>
+    <div class="card">
+    <div class="card-header">
+      <h2 class="card-title">${manager.name}</h2>
+      <h3 class="card-title">${manager.getRole()}</h3>
     </div>
-    <div>
+    <div class="card-body">
       <ul>
         <li>ID: ${manager.getId()}</li>
         <li>Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
@@ -19,12 +19,12 @@ const createTeam = team => {
 
   const createEngineer = (engineer) => {
     return `
-    <div>
-    <div>
-      <h2>${engineer.getName()}</h2>
-      <h3>${engineer.getRole()}</h3>
+    <div class="card">
+    <div class="card-header">
+      <h2 class="card-title">${engineer.getName()}</h2>
+      <h3 class="card-title">${engineer.getRole()}</h3>
     </div>
-    <div>
+    <div class="card-body">
       <ul>
         <li>ID: ${engineer.getId()}</li>
         <li>Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
@@ -37,12 +37,12 @@ const createTeam = team => {
 
   const createIntern = (intern) => {
     return `
-    <div>
-    <div>
-      <h2>${intern.getName()}</h2>
-      <h3>${intern.getRole()}</h3>
+    <div class="card">
+    <div class="card-header">
+      <h2 class="card-title">${intern.getName()}</h2>
+      <h3 class="card-title">${intern.getRole()}</h3>
     </div>
-    <div>
+    <div class="card-body">
       <ul>
         <li>ID: ${intern.getId()}</li>
         <li>Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
@@ -78,16 +78,16 @@ module.exports = team => {
   </head>
 
   <body>
-    <div>
-      <div>
-        <div>
-          <h1>Team Profile</h1>
+    <div class ="container-fluid">
+      <div class="row">
+        <div class="col-12 jumbotron mb-3 bg-dark">
+          <h1 class="text-center text-light">Team Profile</h1>
         </div>
       </div>
     </div>
     <div>
-      <div>
-        <div>
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center">
           ${createTeam(team)}
         </div>
       </div>
