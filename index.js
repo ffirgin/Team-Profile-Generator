@@ -8,6 +8,8 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
 //Arrays to store team and IDs
+const generateHTML = require('./src/generateHTML');
+
 const team = [];
 const ids = [];
 
@@ -127,6 +129,7 @@ function startApp(){
     .then((answers) => {
       const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
       team.push(intern);
+      console.log(team);
       ids.push(answers.internId);
     })
   }
