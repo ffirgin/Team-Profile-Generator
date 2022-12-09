@@ -3,9 +3,9 @@ const fs = require('fs');
 const path = require('path');
 
 // Importing Classes
-const Manager = require('./lib/Manager');
-const Engineer = require('./lib/Engineer');
-const Intern = require('./lib/Intern');
+const Manager = require('./lib/manager');
+const Engineer = require('./lib/engineer');
+const Intern = require('./lib/intern');
 
 //Arrays to store team and IDs
 const generateHTML = require('./src/generateHTML');
@@ -98,6 +98,7 @@ function startApp(){
     .then((answers) => {
       const eng = new Engineer(answers.engName, answers.engId, answers.engEmail, answers.engGitHub);
       team.push(eng);
+      console.log("github" + answers.engGitHub)
       ids.push(answers.engId);
       startTeam();
     });
@@ -129,8 +130,8 @@ function startApp(){
     .then((answers) => {
       const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
       team.push(intern);
-      console.log(team);
       ids.push(answers.internId);
+      startTeam();
     })
   }
 
