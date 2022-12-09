@@ -1,6 +1,6 @@
 # Team-Profile-Generator
 
-!(Link to recording)
+[Team Profile Recording](https://app.castify.com/view/07e22ccb-bf83-41ff-8b4f-4fb6b5b17588)
 
 ## Description
 
